@@ -1,8 +1,10 @@
+import { FaBell, FaUserCircle } from "react-icons/fa";
+
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark  ">
       <a className="navbar-brand" href="#">
-        FameFlow
+        🔥 FameFlow
       </a>
 
       <button
@@ -71,13 +73,17 @@ const Header = () => {
           <input
             className="form-control me-2"
             type="search"
-            placeholder="Search"
+            placeholder="Search posts, users, tags..."
             aria-label="Search"
           />
 
           <button className="btn btn-outline-success" type="submit">
             Search
           </button>
+          {/* <div className="d-flex align-items-center gap-3">
+            <FaBell size={22} />
+            <FaUserCircle size={28} />
+          </div> */}
         </form>
       </div>
     </nav>

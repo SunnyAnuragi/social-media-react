@@ -11,10 +11,7 @@ function App() {
   return (
     <div className="Container">
       <div>
-        <Sidebar
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        ></Sidebar>
+        <Sidebar selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       </div>
       <div className="Content">
         <Header></Header>

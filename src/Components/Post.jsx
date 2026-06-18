@@ -1,4 +1,5 @@
-const Post = ({ post }) => {
+import { MdDeleteSweep } from "react-icons/md";
+const Post = ({ post, onDelete }) => {
   return (
     <div className="card post-card" style={{ width: "18rem" }}>
       <div className="card-body">
@@ -8,6 +9,10 @@ const Post = ({ post }) => {
           <span className="badge bg-danger rounded-pill">
             🌻 {post.reaction}
           </span>
+          <button className="btn btn-outline-danger btn-sm"
+          onClick={() => onDelete(post.id)}>
+            <MdDeleteSweep size={20} />
+          </button>
         </div>
 
         <p className="card-text">{post.body}</p>

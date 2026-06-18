@@ -1,3 +1,6 @@
+import { FaHome } from "react-icons/fa";
+import { MdPostAdd } from "react-icons/md";
+
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
   // const handleOnClick = (tabName) => {
   //   setSelectedTab(tabName);
@@ -21,7 +24,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
         >
           <use xlinkHref="#bootstrap"></use>
         </svg>{" "}
-        <span className="fs-4">Sidebar</span>{" "}
+        <span className="fs-4 fw-bold">DevConnect</span>{" "}
       </a>{" "}
       <hr />{" "}
       <ul className="nav nav-pills flex-column mb-auto">
@@ -47,12 +50,13 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             >
               <use xlinkHref="#home"></use>
             </svg>
+            <FaHome className="me-2" />
             Home
           </a>{" "}
         </li>{" "}
         <li
           onClick={() => {
-            setSelectedTabcd("CreatePost");
+            setSelectedTab("CreatePost");
           }}
         >
           {" "}
@@ -69,6 +73,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             >
               <use xlinkHref="#speedometer2"></use>
             </svg>
+            <MdPostAdd className="me-2" />
             Create Post
           </a>{" "}
         </li>{" "}
@@ -90,7 +95,7 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             height="32"
             className="rounded-circle me-2"
           />{" "}
-          <strong>mdo</strong>{" "}
+          <strong>Sunny Anuragi</strong>{" "}
         </a>{" "}
         <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
           {" "}
