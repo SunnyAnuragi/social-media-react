@@ -1,17 +1,27 @@
-const Post = () => {
+const Post = ({ post }) => {
   return (
-    <div class="card" style={{ width: "18rem" }}>
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" class="btn btn-primary">
-          Go somewhere
-        </a>
+    <div className="card post-card" style={{ width: "18rem" }}>
+      <div className="card-body">
+        <div className="d-flex justify-content-between align-items-center mb-3">
+          <h5 className="card-title mb-0">{post.title}</h5>
+
+          <span className="badge bg-danger rounded-pill">
+            🌻 {post.reaction}
+          </span>
+        </div>
+
+        <p className="card-text">{post.body}</p>
+
+        <div className="mt-3">
+          {post.tags.map((tag) => (
+            <span key={tag} className="badge bg-primary hastag">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
+
 export default Post;

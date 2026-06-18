@@ -1,9 +1,55 @@
 .Container {
   display: flex;
 }
+body {
+  background-color: #f4f6f8;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
 .Content {
   width: 100%;
 }
 .sidebar {
   min-height: 100vh;
+}
+
+.post-card {
+  margin: 20px;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.post-card .card-body {
+  padding: 1.5rem;
+}
+
+.post-card .card-title {
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.post-card .card-text {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.hastag {
+  display: inline-block;
+  margin: 6px 6px 0 0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
